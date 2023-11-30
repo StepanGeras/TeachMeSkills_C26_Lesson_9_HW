@@ -1,24 +1,23 @@
 package com.teachmeskills.lesson9.task3.menu;
 
-import com.teachmeskills.lesson9.task3.client.Client;
 import com.teachmeskills.lesson9.task3.service.Check;
-import com.teachmeskills.lesson9.task3.service.Limit;
 import com.teachmeskills.lesson9.task3.service.TransferMoney;
 
 import java.util.Scanner;
 
 public class Menu {
 
-    public static void DoMenu () {
+    public static int DoMenu () {
 
         Scanner scanner = new Scanner(System.in);
         TransferMoney transferMoney = new TransferMoney();
 
-        System.out.println("Select a card to transfer \n" +
-                "1. Visa (Euro) \n" +
-                "2. Master (Dollar) \n" +
-                "3. Bel (Ruble) \n" +
-                "4. Exit");
+        System.out.println("""
+                Select a card to transfer\s
+                1. Visa (Euro)\s
+                2. Master (Dollar)\s
+                3. Bel (Ruble)\s
+                4. Exit""");
         int number = scanner.nextInt();
 
         switch (number){
@@ -26,10 +25,11 @@ public class Menu {
 
                 Check.CheckVisaCard();
 
-                System.out.println("Which card should I transfer to? \n" +
-                        "1. Master \n" +
-                        "2. Bel \n" +
-                        "3. Return");
+                System.out.println("""
+                        Which card should I transfer to?\s
+                        1. Master\s
+                        2. Bel\s
+                        3. Return""");
 
                 number = scanner.nextInt();
 
@@ -53,10 +53,11 @@ public class Menu {
 
                 Check.CheckMasterCard();
 
-                System.out.println("Which card should I transfer to? \n" +
-                        "1. Visa \n" +
-                        "2. Bel \n" +
-                        "3. Return");
+                System.out.println("""
+                        Which card should I transfer to?\s
+                        1. Visa\s
+                        2. Bel\s
+                        3. Return""");
 
                 number = scanner.nextInt();
 
@@ -81,10 +82,11 @@ public class Menu {
 
                 Check.CheckBelCard();
 
-                System.out.println("Which card should I transfer to? \n" +
-                        "1. Master \n" +
-                        "2. Visa \n" +
-                        "3. Return");
+                System.out.println("""
+                        Which card should I transfer to?\s
+                        1. Master\s
+                        2. Visa\s
+                        3. Return""");
 
                 number = scanner.nextInt();
 
@@ -107,9 +109,11 @@ public class Menu {
                 break;
 
             default:
-                return;
+                return 0;
 
         }
+
+        return 0;
 
     }
 
