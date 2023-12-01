@@ -1,6 +1,6 @@
 package com.teachmeskills.lesson9.task3;
 
-import com.teachmeskills.lesson9.task3.menu.Menu;
+import com.teachmeskills.lesson9.task3.service.menu.Menu;
 
 /**
  * Задача 3
@@ -36,7 +36,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Menu.DoMenu();
+        Menu.doMenu();
 
     }
 
