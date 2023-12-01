@@ -49,4 +49,20 @@ public class Client {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public BaseCard[] getBaseCards() {
+        return baseCards;
+    }
+
+    public void setBaseCards(BaseCard[] baseCards) {
+        this.baseCards = baseCards;
+    }
+
 }
